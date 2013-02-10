@@ -4,7 +4,6 @@ define('SITE_DOMINE', '116.ru');
 define('SITE_CHARSET', 'cp1251');
 define('JOBLINK_REGEXP', '/http:\/\/116\.ru\/job\/vacancy\/([0-9]+)\.html/iu');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 3);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);

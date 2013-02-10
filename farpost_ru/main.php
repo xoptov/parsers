@@ -4,7 +4,6 @@ define('SITE_DOMINE', 'vladivostok.farpost.ru');
 define('SITE_CHARSET', 'cp1251');
 define('JOBLINK_REGEXP', '/<a\sname="[0-9]+"\sclass="bulletinLink\s"\shref="http:\/\/vladivostok\.farpost\.ru\/([\w\-]+)\-([0-9]+)\.html"\s>[\w0-9\-\:\.\,\(\)\s]+<\/a>/iu');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 3);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);

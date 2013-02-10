@@ -5,7 +5,6 @@ define('SITE_CHARSET', 'cp1251');
 define('PAGELINK_REGEXP', '/\shref="\?page=([0-9]+)"\stitle="Перейти\sна\sстраницу\s[0-9]+"/iuU');
 define('JOBLINK_REGEXP', '/href="\?id=([0-9]+)(?:&page=[0-9]{1})?#vacancy"/iu');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 3);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);

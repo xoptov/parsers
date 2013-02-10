@@ -2,10 +2,8 @@
 require_once("../config.php");
 define('SITE_DOMINE', 'www.spb.estrabota.ru');
 define('SITE_CHARSET', 'cp1251');
-//define('PAGELINK_REGEXP', '/\shref="\?page=([0-9]+)"\stitle="Перейти\sна\sстраницу\s[0-9]+"/iuU');
 define('JOBLINK_REGEXP', '/<p\sclass="title"\sid="t[0-9]+"><a\shref="http:\/\/www\.spb\.estrabota\.ru\/index\.php\/job\/view\/vacancy\/([0-9]+)_([_0-9\w\:\-]+)\/">[0-9\w\-\s\:\,\.]+<\/a><\/p>/iu');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 1);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);
@@ -34,7 +32,6 @@ define('FA_EXPERIENCE', '/<dt>Опыт\sработы:<\/dt>\s*<dd>(.+)<\/dd>/siu
 define('FA_PLACE', '/<p\sclass="city-date"\sid="cd[0-9]+">([\w\s\-]+)\s\|/siu');
 define('FA_BUDGET', '/<p\sclass="pay">от\s([0-9]+)\s<span>руб.<\/span>/iu');
 define('FA_ORGANIZATION', '/<dt>Работодатель:<\/dt>\s*<dd>([0-9\w\.\,\-\"\'\:\s]+)<\/dd>/iu');
-//define('FA_URL', '//iu');
 
 $parser = new ParserV9("http://www.spb.estrabota.ru/index.php/job/resultadvanced/vacancy/?pArea=0&position=1%F1&city=14&age=&ageFrom=&ageTo=&educationS=0&experience=0&timetable=0&wSalary=&dateUpdate=1&advanced=%EF%EE%E8%F1%EA");
 $parser->start();

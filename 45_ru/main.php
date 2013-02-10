@@ -2,10 +2,8 @@
 require_once("../config.php");
 define('SITE_DOMINE', '45.ru');
 define('SITE_CHARSET', 'cp1251');
-define('PAGELINK_REGEXP', '/http:\/\/45\.ru\/job\/vacancy\/[0-9]+\.php\?Search=2&.+/iuU');
 define('JOBLINK_REGEXP', '/http:\/\/45\.ru\/job\/vacancy\/([0-9]+)\.html/iu');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 3);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);

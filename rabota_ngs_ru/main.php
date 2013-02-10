@@ -4,7 +4,6 @@ define('SITE_DOMINE', 'rabota.ngs.ru');
 define('SITE_CHARSET', 'utf-8');
 define('JOBLINK_REGEXP', '/href="\/vacancy\/([_0-9\w]+)\?id=([0-9]+)"/iu');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 3);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);

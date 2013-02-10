@@ -6,7 +6,6 @@ define('FUTURE_URL_PREG', '/\/index\.php\?page=bank_vacancy&d=1%F1&hidka=1&sh=1&
 define('QUERY_OPTIONS_PREG', '/view_vac\(([0-9]+),([0-9]+),([0-9]+)\)/iu');
 define('QUERY_TARGET_SCRIPT', 'http://bg22.ru/script/view_vacancy.php');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 3);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);

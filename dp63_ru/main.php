@@ -5,7 +5,6 @@ define('SITE_CHARSET', 'utf-8');
 define('PAGELINK_REGEXP', '/<a\shref="http:\/\/dp63\.ru\/job\/vacancy\/search\/page-([0-9]+)\/\?speciality=1с\sпрограммист"/iu');
 define('JOBLINK_REGEXP', '/<div\sclass="spec">R?<a\shref="http:\/\/dp63\.ru\/job\/vacancy\/concrete-([0-9]+)\/">/iu');
 define('HTTP_GZIP', 1);
-define('DEBUG_MODE', 1);
 
 /* Константы для объявлений о ваканиях */
 define('CUSTOMER_ID', 6666);
