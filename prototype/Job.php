@@ -29,7 +29,7 @@ class Job{
 	public $isSocialPost;
 	public function save($dbh){
 		$this->checkCorrect();
-		$sql = "INSERT INTO s_vacancies SET date = :date, title = :title, descr = :descr, employ_type = :employType, experience = :experience, vers_id = :versionId, conf_id = :configId, customerid = :customerId, placeid = :placeId, isbudget_range = :isBudgetRange, budgetlow = :budgetLow, budgethigh = :budgetHigh, currency = :currency, status = :status, restrict_discussion = :restrictDiscussion, url = :url, countLancer = :countLancer, organization = :organization, userid_cookies = :userIdCookie, isshow = :isShow, from_phone = :fromPhone, fixendate = :fixenDate, moneyactsum = :moneyActSum, changedate = :changeDate, colorenddate = :colorEndDate, is_social_post = :isSocialPost";
+		$sql = "INSERT INTO ".STORAGE_TABLE." SET date = :date, title = :title, descr = :descr, employ_type = :employType, experience = :experience, vers_id = :versionId, conf_id = :configId, customerid = :customerId, placeid = :placeId, isbudget_range = :isBudgetRange, budgetlow = :budgetLow, budgethigh = :budgetHigh, currency = :currency, status = :status, restrict_discussion = :restrictDiscussion, url = :url, countLancer = :countLancer, organization = :organization, userid_cookies = :userIdCookie, isshow = :isShow, from_phone = :fromPhone, fixendate = :fixenDate, moneyactsum = :moneyActSum, changedate = :changeDate, colorenddate = :colorEndDate, is_social_post = :isSocialPost";
 		$dbh->beginTransaction();
 		$sth = $dbh->prepare($sql);
 		$sth->bindParam(":date", $this->date, PDO::PARAM_STR);
@@ -61,7 +61,7 @@ class Job{
 		if($sth->execute()){
 			$lastInsertId = $dbh->lastInsertId();
 			$siteDomine = SITE_DOMINE;
-			$sql = "INSERT INTO parser_vacancies SET id = :id, real_id = :realId, domine = :domine";
+			$sql = "INSERT INTO ".CONTROL_TABLE." SET id = :id, real_id = :realId, domine = :domine";
 			$sth = $dbh->prepare($sql);
 			$sth->bindParam(":id", $lastInsertId, PDO::PARAM_INT);
 			$sth->bindParam(":realId", $this->id, PDO::PARAM_INT);
@@ -75,7 +75,7 @@ class Job{
 			}
 		}else{
 			$dbh->rollBack();
-			throw new WritingExeption("Ошибка добавления вакансии в таблицу s_vacancies!\n");
+			throw new WritingException("Ошибка добавления вакансии в таблицу s_vacancies!\n");
 		}
 	}
 	public function __toString(){

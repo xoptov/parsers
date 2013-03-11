@@ -96,7 +96,7 @@ abstract class Parser{
 		}
 	}
 	protected function checkJobDuplicate($object){
-		$sql = sprintf("SELECT id FROM parser_vacancies WHERE domine = '%s' AND real_id = %s LIMIT 1", SITE_DOMINE, $object);
+		$sql = sprintf("SELECT id FROM ".CONTROL_TABLE." WHERE domine = '%s' AND real_id = %s LIMIT 1", SITE_DOMINE, $object);
 		$sth = $this->dbh->query($sql);
 		if($sth->fetchColumn()){
 			$object->status = 3;
@@ -128,7 +128,7 @@ abstract class Parser{
 	protected function initCh(){
 		if($this->ch = curl_init()){
 			curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($this->ch, CURLOPT_COOKIEFILE, "cookie.db");
+			curl_setopt($this->ch, CURLOPT_COOKIEFILE, "../cookie.db");
 			if(HTTP_GZIP) curl_setopt($this->ch, CURLOPT_ENCODING, "gzip");
 			if(DEBUG_MODE&1) curl_setopt($this->ch, CURLOPT_NOPROGRESS, 0);
 			if(DEBUG_MODE&2) curl_setopt($this->ch, CURLOPT_PROXY, "127.0.0.1:8888");
@@ -155,9 +155,4 @@ abstract class Parser{
 		}
 	}
 }
-class DuplicateException extends Exception{}
-class ContentException extends Exception{}
-class WritingException extends Exception{}
-class PoorQualityException extends Exception{}
-class PoorExpression extends Exception{}
 ?>
