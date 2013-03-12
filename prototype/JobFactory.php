@@ -14,7 +14,7 @@ abstract class JobFactory{
 	}
 	abstract protected function getUrl(&$content);
 	protected function loadCAV(){
-		$sth = $this->dbh->query("SELECT cc.id, cc.name, vc.id AS version_id, vc.name AS version_name FROM s_confclassifer AS cc INNER JOIN s_versclassifier AS vc ON cc.vers_id = vc.id ORDER BY version_name");
+		$sth = $this->dbh->query("SELECT cc.id, cc.name, vc.id AS version_id, vc.name AS version_name FROM ".CONFIG_TABLE." AS cc INNER JOIN ".VERSION_TABLE." AS vc ON cc.vers_id = vc.id ORDER BY version_name");
 		if($sth->fetchColumn()){
 			while($row = $sth->fetch(PDO::FETCH_OBJ)){
 				array_push($this->listCAV, new ItemCAV($row->id, $row->name, $row->version_id, $row->version_name));
@@ -24,7 +24,7 @@ abstract class JobFactory{
 		}
 	}
 	protected function loadCP(){
-		$sth = $this->dbh->query("SELECT p.id AS p_id, p.descr AS p_name, c.id AS c_id, c.descr AS c_name FROM s_places AS p INNER JOIN s_countries AS c ON p.countryid = c.id");
+		$sth = $this->dbh->query("SELECT p.id AS p_id, p.descr AS p_name, c.id AS c_id, c.descr AS c_name FROM ".PLACE_TABLE." AS p INNER JOIN ".COUNTRIES_TABLE." AS c ON p.countryid = c.id");
 		if($sth->fetchColumn()){
 			while($row = $sth->fetch(PDO::FETCH_OBJ)){
 				array_push($this->listCP, new ItemCP($row->p_id, $row->p_name, $row->c_id, $row->c_name));
@@ -98,7 +98,7 @@ abstract class JobFactory{
 	}
 	protected function getPlace(&$content){
 		if(preg_match(FA_PLACE, $content, $match)){
-			$sql = "SELECT id FROM s_places WHERE descr LIKE '%$match[1]%'";
+			$sql = "SELECT id FROM ".PLACE_TABLE." WHERE descr LIKE '%$match[1]%'";
 			$sth = $dbh->query($sql);
 			if($sth->fetchColumn()){
 				$row = $sth->fetch(PDO::FETCH_OBJ);
