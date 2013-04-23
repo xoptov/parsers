@@ -1,5 +1,5 @@
+#!/usr/bin/php
 <?php
-
 require_once("../config.php");
 define('SITE_DOMINE', 'job.professia.info');
 define('SITE_CHARSET', 'utf-8');

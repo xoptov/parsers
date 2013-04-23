@@ -65,11 +65,7 @@ abstract class JobFactory{
 		if(preg_match(FA_JOB_ID, $content, $match)) return $match[1];
 	}
 	protected function getDate(&$content){
-		if(preg_match(FA_DATE, $content, $match)){
-			return date('Y-m-d', strtotime($match[1]));
-		}else{
-			return date('Y-m-d');
-		}
+	    return date('Y-m-d H:i:s');
 	}
 	protected function setTitle($job, &$content){
 		if(preg_match(FA_TITLE, $content, $match)){

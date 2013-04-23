@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 require_once("../config.php");
 define('SITE_DOMINE', '45.ru');
