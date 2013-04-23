@@ -1,13 +1,13 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', '48.ru');
 define('SITE_CHARSET', 'cp1251');
 define('JOBLINK_REGEXP', '/http:\/\/48\.ru\/job\/vacancy\/([0-9]+)\.html/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 8248);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

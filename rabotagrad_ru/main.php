@@ -1,13 +1,13 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'rabotagrad.ru');
 define('SITE_CHARSET', 'cp1251');
 define('JOBLINK_REGEXP', '/http:\/\/www\.rabotagrad\.ru\/inner\.php\?pathstring=search&urlparams=_avacancy_b([0-9]+)&result_id2=Array&profession=1с&category=25&city=-1&sex=-1&exp=0&age=&education=0&busy=0&pay=&vac_type1=2&datelimit=7&sortmode=byrelevance&pagecnt=60&printmode=short&currpage=0&search_mode=vacancy&action_mode=print&view_id=0/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 181);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

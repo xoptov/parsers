@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'dp63.ru');
 define('SITE_CHARSET', 'utf-8');
 define('PAGELINK_REGEXP', '/<a\shref="http:\/\/dp63\.ru\/job\/vacancy\/search\/page-([0-9]+)\/\?speciality=1с\sпрограммист"/iu');
@@ -8,7 +8,7 @@ define('JOBLINK_REGEXP', '/<div\sclass="spec">R?<a\shref="http:\/\/dp63\.ru\/job
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 8253);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

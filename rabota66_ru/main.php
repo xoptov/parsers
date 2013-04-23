@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'www.rabota66.ru');
 define('SITE_CHARSET', 'utf-8');
 define('PAGELINK_REGEXP', '/href="\/vacancy\/search\?request=%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82\+1%D1%81&amp;pay_range_min=5000&amp;pay_range_max=80000&amp;page=([0-9]+)"/iu');
@@ -8,7 +8,7 @@ define('JOBLINK_REGEXP', '/href="\/vacancy\/([0-9]+)"/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 8257);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

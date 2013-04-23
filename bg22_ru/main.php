@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'bg22.ru');
 define('SITE_CHARSET', 'cp1251');
 define('FUTURE_URL_PREG', '/\/index\.php\?page=bank_vacancy&d=1%F1&hidka=1&sh=1&page1=[0-9]+/iu');
@@ -9,7 +9,7 @@ define('QUERY_TARGET_SCRIPT', 'http://bg22.ru/script/view_vacancy.php');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 223);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

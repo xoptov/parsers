@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'ekat.erabota.ru');
 define('SITE_CHARSET', 'cp1251');
 define('PAGELINK_REGEXP', '/\shref="\?page=([0-9]+)"\stitle="Перейти\sна\sстраницу\s[0-9]+"/iuU');
@@ -8,7 +8,7 @@ define('JOBLINK_REGEXP', '/href="\?id=([0-9]+)(?:&page=[0-9]{1})#vacancy"/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 8254);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

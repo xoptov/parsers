@@ -1,13 +1,13 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'rabota.ngs70.ru');
 define('SITE_CHARSET', 'utf-8');
 define('JOBLINK_REGEXP', '/href="\/vacancy\/([_0-9\w]+)\?id=([0-9]+)"/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 8260);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

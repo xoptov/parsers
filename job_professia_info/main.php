@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'job.professia.info');
 define('SITE_CHARSET', 'utf-8');
 define('PAGELINK_REGEXP', '/href="\?i33lt=1%D1%81+%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82&amp;i33lp%5B0%5D=0&amp;i33lp%5B3%5D=3&amp;i33li=1&amp;i33lr=0&amp;i33ln=&amp;i33lx=&amp;i33le=&amp;i33ll=([0-9]+)/iuU');
@@ -8,7 +8,7 @@ define('JOBLINK_REGEXP', '/href="\/vacview\/\?i34lvac_id=([0-9]+)"/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 8255);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

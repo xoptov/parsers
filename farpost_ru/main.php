@@ -1,13 +1,13 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'vladivostok.farpost.ru');
 define('SITE_CHARSET', 'cp1251');
 define('JOBLINK_REGEXP', '/<a\sname="[0-9]+"\sclass="bulletinLink\s"\shref="http:\/\/vladivostok\.farpost\.ru\/([\w\-]+)\-([0-9]+)\.html"\s>[\w0-9\-\:\.\,\(\)\s]+<\/a>/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 119);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);

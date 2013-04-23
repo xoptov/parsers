@@ -1,13 +1,13 @@
 #!/usr/bin/php
 <?php
-require_once("../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 define('SITE_DOMINE', 'www.spb.estrabota.ru');
 define('SITE_CHARSET', 'cp1251');
 define('JOBLINK_REGEXP', '/<p\sclass="title"\sid="t[0-9]+"><a\shref="http:\/\/www\.spb\.estrabota\.ru\/index\.php\/job\/view\/vacancy\/([0-9]+)_([_0-9\w\:\-]+)\/">[0-9\w\-\s\:\,\.]+<\/a><\/p>/iu');
 define('HTTP_GZIP', 1);
 
 /* Константы для объявлений о ваканиях */
-define('CUSTOMER_ID', 6666);
+define('CUSTOMER_ID', 8241);
 define('IS_BUDGET_RANGE', 0);
 define('BUDGET_HIGH', 0);
 define('CURRENCY', 1);
